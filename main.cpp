@@ -9,6 +9,12 @@
 
 
 int main (int argc, char *argv[]) {
+  std::cout 
+    << reader("transmission1.txt") 
+    << std::endl;
+
+  /*
+
   std::vector<std::string> transmissions;
   std::vector<std::string> maliciousCodes;
 
@@ -18,6 +24,8 @@ int main (int argc, char *argv[]) {
   for (int i = 1; i < 4; ++i)
     maliciousCodes.push_back(reader("./mcode1.txt"));
   
+  */
+
   /* ToDo:
     Part 1 Logs
     Part 2 Logs
