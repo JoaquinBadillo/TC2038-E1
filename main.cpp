@@ -5,6 +5,7 @@
 #include "./lib/reader.hpp"
 #include "./lib/substrings.hpp"
 #include "./lib/longest_substring.hpp"
+#include "./lib/palindromes.hpp" 
 
 int main (int argc, char *argv[]) {
   std::vector<std::string> transmissions;
