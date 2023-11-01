@@ -7,7 +7,6 @@
   Contains utilities to read the contents of files.
   
   Last Update: 30/Oct/2023
-  Author: Joaquín Badillo
 */
 
 #include <string>
