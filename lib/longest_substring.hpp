@@ -42,7 +42,7 @@ namespace p3 {
           memo[i][j] = memo[i - 1][j - 1] + 1;
           if (memo[i][j] > max) {
             max = memo[i][j];
-            end = i - 1;
+            end = i;
           }
         } 
         else {
