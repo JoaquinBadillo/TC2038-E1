@@ -38,12 +38,15 @@ int main (int argc, char *argv[]) {
 
   // Part 2
   std::cout << "Parte 2" << std::endl;
-  /* Palindromes */
+  for (auto transmission = transmissions.begin(); transmission != transmissions.end(); ++transmission) {
+    std::pair<int, int> res = p2::manacherPalindrome(*transmission);
+    std::cout << " " << res.first << " " << res.second << std::endl;
+  }
 
   // Part 3 - Checking similarities between transmissions
   std::cout << "Parte 3" << std::endl;
 
-  // Use the longest substring as the main string
+  // Get indexes on the first transmission
   p3::Result res = p3::longest_substring(transmissions[0], transmissions[1]);
 
   if (res.has_value())
