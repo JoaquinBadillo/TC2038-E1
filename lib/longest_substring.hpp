@@ -49,7 +49,7 @@ namespace p3 {
           // If current substring is longer than max, update max and end
           if (memo[i][j] > max) {
             max = memo[i][j];
-            end = i - 1;
+            end = i;
           }
         } 
         else {
