@@ -1,3 +1,9 @@
 A01026364 - Joaquín Badillo Granillo
+    * Función para leer archivos
+    * Algoritmo del Substring más largo (en conjunto con Iker)
+    * Algoritmo KMP (en conjunto con Iker)
 A01027384 - Gabriel Rodríguez De Los Reyes
+    * Algoritmo de Manacher para Palíndromos
 A01782767 - Iker Garcia German
+    * Algoritmo del Substring más largo (en conjunto con Joaquín)
+    * Algoritmo KMP (en conjunto con Joaquín)
