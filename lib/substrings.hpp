@@ -11,6 +11,7 @@
 
 #include <string>
 #include <vector>
+#include <optional>
 
 namespace p1 {
   // Function to preprocess a pattern string and return a vector of integers
@@ -44,9 +45,8 @@ namespace p1 {
 
       return V;
   }
-  // Function to check if a pattern string is a substring of a text string
-  bool isSubstring(const std::string &text, const std::string &pattern) {
-    // Find the lengths of the text and the pattern
+
+  std::optional<int> isSubstring(const std::string &text, const std::string &pattern) {
     int n = text.length();
     int m = pattern.length();
 
@@ -60,12 +60,11 @@ namespace p1 {
       if (text[i] == pattern[j]) { // If the current characters match, increment pointers
         i++;
         j++;
-
-        if (j == m) { // If we have reached the end of the pattern, return true
-          return true;
-        }
-      } else { // If no match and j is at the beginning, increment i
-        if (j == 0) { 
+        // Slight modification to return starting index of the substring
+        if (j == m)
+          return i - m + 1;
+      } else {
+        if (j == 0) {
           i++;
           pos = i;
         } else { // If no match, update i and j based on the preprocessing table
@@ -74,8 +73,8 @@ namespace p1 {
         }
       }
     }
-    // If the pattern was not found in the text, return false
-    return false;
+
+    return {};
   }
 }
 
