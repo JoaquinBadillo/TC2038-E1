@@ -28,10 +28,11 @@ int main (int argc, char *argv[]) {
   std::cout << "Parte 1" << std::endl;
   for (auto transmission = transmissions.begin(); transmission != transmissions.end(); ++transmission) {
     for (auto maliciousCode = maliciousCodes.begin(); maliciousCode != maliciousCodes.end(); ++maliciousCode) {
-      std::cout 
-        << " "
-        << (p1::isSubstring(*transmission, *maliciousCode) ? "true" : "false")
-        << std::endl;
+      std::optional<int> res = p1::isSubstring(*transmission, *maliciousCode);
+      if (res.has_value())
+        std::cout << " true " << res.value() << std::endl;
+      else
+        std::cout << " false" << std::endl;
     }
   }
 
@@ -43,18 +44,12 @@ int main (int argc, char *argv[]) {
   std::cout << "Parte 3" << std::endl;
 
   // Use the longest substring as the main string
-  p3::Result res;
-  if (transmissions[0].length() > transmissions[1].length())
-    res = p3::longest_substring(transmissions[0], transmissions[1]);
-  else
-   res = p3::longest_substring(transmissions[1], transmissions[0]);
+  p3::Result res = p3::longest_substring(transmissions[0], transmissions[1]);
 
-  // Prints the starting and ending indices (in the longest string) of the longest substring
   if (res.has_value())
     std::cout << " " << res.value().first << " " << res.value().second << std::endl;
   else
     std::cout << " Ninguna coincidencia" << std::endl;
-  
   
   return 0;
 }

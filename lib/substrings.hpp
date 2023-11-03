@@ -11,6 +11,7 @@
 
 #include <string>
 #include <vector>
+#include <optional>
 
 namespace p1 {
   std::vector<int> preprocessing(const std::string &pattern) {
@@ -39,7 +40,7 @@ namespace p1 {
       return V;
   }
 
-  bool isSubstring(const std::string &text, const std::string &pattern) {
+  std::optional<int> isSubstring(const std::string &text, const std::string &pattern) {
     int n = text.length();
     int m = pattern.length();
 
@@ -52,10 +53,9 @@ namespace p1 {
       if (text[i] == pattern[j]) {
         i++;
         j++;
-
-        if (j == m) {
-          return true;
-        }
+        // Slight modification to return starting index of the substring
+        if (j == m)
+          return i - m + 1;
       } else {
         if (j == 0) {
           i++;
@@ -67,7 +67,7 @@ namespace p1 {
       }
     }
 
-    return false;
+    return {};
   }
 }
 
