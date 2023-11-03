@@ -4,6 +4,8 @@ A01026364 - Joaquín Badillo Granillo
     * Algoritmo KMP (en conjunto con Iker)
 A01027384 - Gabriel Rodríguez De Los Reyes
     * Algoritmo de Manacher para Palíndromos
+    * Reflexión (en conjunto con Iker)
 A01782767 - Iker Garcia German
     * Algoritmo del Substring más largo (en conjunto con Joaquín)
     * Algoritmo KMP (en conjunto con Joaquín)
+    * Reflexión (en conjunto con Gabriel)
